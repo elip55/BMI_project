@@ -30,7 +30,7 @@ def calculations_eli():
     print(f"Eli, your BMI = {BMI_eli} ")
 
     if BMI_eli <= healthy_BMI_max_eli and BMI_eli >= healthy_BMI_min_eli:
-        print("Congrats, you are at a helthy BMI!")
+        print("Congrats, you are at a healthy BMI!")
     else:
         print("You have some work to do.")
         
