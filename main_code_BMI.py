@@ -37,12 +37,12 @@ def inches_conversion():
 def calculations_eli():
     
     print("And now, lets get started on the BMI caclulations!")
-    height_eli = float(input("Eli, please intput your height in inches: "))
-    weight_eli = float(input("Eli, please input your weight in lbs: "))
+    height_eli = float(input("please intput your height in inches: "))
+    weight_eli = float(input("please input your weight in lbs: "))
     BMI_eli = round((weight_eli/(pow(height_eli,2)))*703,4)
     healthy_BMI_min_eli = 18
     healthy_BMI_max_eli = 24
-    print(f"Eli, your BMI = {BMI_eli} ")
+    print(f"your BMI = {BMI_eli} ")
     
     if BMI_eli <= healthy_BMI_max_eli and BMI_eli >= healthy_BMI_min_eli:
         print("Congrats, you are at a healthy BMI!")
