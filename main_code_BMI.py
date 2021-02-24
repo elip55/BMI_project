@@ -1,12 +1,13 @@
 import math 
 
 def kilo_conversion():
+    print("And now, lets get started on conversions, if needed.")
     answer = input("Do you need to convert kilos to lbs? y/n ")
     
     if answer == 'y' or answer =='Y':
-        weight_kg_eli = float(input("Please input your weight in kg "))
-        weight_lbs_eli = round(weight_kg_eli*2.20462, 4)
-        print(f"Your weight in lbs = {weight_lbs_eli}")
+        weight_kg = float(input("Please input your weight in kg "))
+        weight_lbs = round(weight_kg*2.20462, 4)
+        print(f"Your weight in lbs = {weight_lbs}")
     
     elif answer == 'n' or answer == 'N' or answer == 'no' or answer == 'No': 
         print("Okay, let us move along!")
@@ -34,22 +35,35 @@ def inches_conversion():
         print("That is not a valid input.")
         inches_conversion()
         
-def calculations_eli():
-    
+        
+def calculations():
     print("And now, lets get started on the BMI caclulations!")
-    height_eli = float(input("please intput your height in inches: "))
-    weight_eli = float(input("please input your weight in lbs: "))
-    BMI_eli = round((weight_eli/(pow(height_eli,2)))*703,4)
-    healthy_BMI_min_eli = 18
-    healthy_BMI_max_eli = 24
-    print(f"your BMI = {BMI_eli} ")
+    height = float(input("please intput your height in inches: "))
+    weight = float(input("please input your weight in lbs: "))
+    BMI = round((weight/(pow(height,2)))*703,4)
+    healthy_BMI_min = 18
+    healthy_BMI_max= 24
+    print("-------------------")
+    print(f"Your BMI = {BMI} ")
+    print("-------------------")
     
-    if BMI_eli <= healthy_BMI_max_eli and BMI_eli >= healthy_BMI_min_eli:
+    if BMI <= healthy_BMI_max and BMI >= healthy_BMI_min:
         print("Congrats, you are at a healthy BMI!")
     
     else:
-        print("You have some work to do.")
+        print(f"Remember, a healthy BMI is between {healthy_BMI_min} and {healthy_BMI_max}! You have some work to do!")
         
+    if weight > goal: 
+        print("-------------------")
+        print(f"You haven't reached your weight goal of {goal}.")
+        print("-------------------")
+    elif weight <= goal:
+        print("-------------------")
+        print(f"Congrats!  You have reached your weight goal of {goal}!")
+        print("-------------------")
+
+print("This is a simple program to find your goal weight and BMI.")
+goal = float(input("Let's start here, what is your goal weight?"))
 kilo_conversion()
 inches_conversion()
-calculations_eli()
+calculations()
