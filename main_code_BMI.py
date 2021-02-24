@@ -21,11 +21,11 @@ def inches_conversion():
     
     if answer == 'y' or answer == 'Y' or answer == 'yes' or answer == 'Yes':
         print("Okay, let's start with ft.")
-        height_ft_eli = float(input("Input your ft: "))
+        height_ft = float(input("Input your ft: "))
         print("Now, lets add inches.")
-        height_in_eli = float(input("Input your in: "))
-        height_in_in_eli = round((height_ft_eli*12) + height_in_eli, 4)
-        print(f"Your height in inches = {height_in_in_eli}")
+        height_in= float(input("Input your in: "))
+        height_in_inches = round((height_ft*12) + height_in, 4)
+        print(f"Your height in inches = {height_in_inches}")
     
     elif answer == 'no' or answer == 'No' or answer == 'n' or answer == 'N':
         print("Okay, lets move along!")
