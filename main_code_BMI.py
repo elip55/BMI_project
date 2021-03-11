@@ -32,7 +32,7 @@ def inches_conversion(): # Function to convert ft to inches
         
 def calculations(): # Final calculations 
     print("And now, lets get started on the BMI caclulations!")
-    height = float(input("please intput your height in inches: "))
+    height = float(input("please input your height in inches: "))
     weight = float(input("please input your weight in lbs: "))
     BMI = round((weight/(pow(height,2)))*703,4)
     healthy_BMI_min = 18
