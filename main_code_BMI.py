@@ -31,6 +31,7 @@ def inches_conversion(): # Function to convert ft to inches
         
         
 def calculations(): # Final calculations 
+    goal = float(input("Before we start calculating, let's start here, what is your goal weight, in lbs?"))
     print("And now, lets get started on the BMI caclulations!")
     height = float(input("please input your height in inches: "))
     weight = float(input("please input your weight in lbs: "))
@@ -54,7 +55,6 @@ def calculations(): # Final calculations
         print("-------------------")
 
 print("This is a simple program to find your goal weight and BMI.")
-goal = float(input("Let's start here, what is your goal weight, in lbs?"))
 kilo_conversion()
 inches_conversion()
 calculations()
