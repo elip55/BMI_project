@@ -2,7 +2,7 @@
 
 
 def calculations(): # Final calculations 
-    goal = float(input("Before we start calculating, let's start here, what is your goal weight, in lbs?"))
+    goal = float(input("Before we start calculating, what is your goal weight, in lbs?"))
     print("And now, lets get started on the BMI caclulations!")
     height = float(input("please input your height in inches: "))
     weight = float(input("please input your weight in lbs: "))
