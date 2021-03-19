@@ -1,5 +1,6 @@
 
 from .intro import goal
+from tqdm import tqdm
 import plotly.graph_objects as go
 
 def calculations(): # Final calculations 
@@ -11,10 +12,11 @@ def calculations(): # Final calculations
     healthy_BMI_min = 18
     healthy_BMI_max= 24
 
-
     fig = go.Figure(data=[go.Table(header=dict(values=['Healthy BMI min', 'Healthy BMI max', 'Your BMI']),
                  cells=dict(values=[[healthy_BMI_min], [healthy_BMI_max], [BMI]]))
                      ])
+    for i in tqdm(range(100)):
+        pass
     fig.show()
 
 
