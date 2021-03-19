@@ -13,6 +13,8 @@ def calculations(): # Final calculations
     healthy_BMI_min = 18
     healthy_BMI_max= 24
 
+    # not sure if I like this table quite yet. I enjoy the potential of the table itself. 
+
     fig = go.Figure(data=[go.Table(header=dict(values=['Healthy BMI min', 'Healthy BMI max', 'Your BMI']),
                  cells=dict(values=[[healthy_BMI_min], [healthy_BMI_max], [BMI]]))
                      ])
