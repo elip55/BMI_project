@@ -1,14 +1,16 @@
 
 from .intro import goal
 
-def calculations(): # Final calculations 
+# Final calculations from gathered data
+def calculations(): 
 
     print("Okay, lets get started on the BMI caclulations!")
-    height = float(input("please input your height in inches: "))
-    weight = float(input("please input your weight in lbs: "))
+    height = float(input("Please input your height in inches: "))
+    weight = float(input("Please input your weight in lbs: "))
     BMI = round((weight/(pow(height,2)))*703,4)
     healthy_BMI_min = 18
     healthy_BMI_max= 24
+    # Display the results 
     print("-------------------")
     print(f"Your BMI = {BMI} ")
     print("-------------------")
