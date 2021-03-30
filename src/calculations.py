@@ -1,5 +1,5 @@
 
-from .color_class import bcolors
+from .colors import bcolors
 from .intro import goal
 from tqdm import tqdm
 import plotly.graph_objects as go
