@@ -1,4 +1,4 @@
-
+from .colors import bcolors
 
 print("This is a simple program to find your goal weight and BMI.")
 
@@ -6,6 +6,6 @@ print("This is a simple program to find your goal weight and BMI.")
 try:
     goal = float(input("Before we start calculating, what is your goal weight, in lbs?"))
 except: 
-    print("INVALID: Goal weight should be an integer, please run the program again.")
+    print(bcolors.FAIL + "INVALID: Goal weight should be an integer, please run the program again." + bcolors.ENDC)
 
 
