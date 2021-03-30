@@ -1,7 +1,8 @@
 
 
+
+
+*DS_store
+
 __pycache__/
 
-# jupyter lab
-*.ipynb 
-*.ipynb_checkpoints

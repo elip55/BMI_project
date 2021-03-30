@@ -4,25 +4,20 @@ from .intro import goal
 from tqdm import tqdm
 import plotly.graph_objects as go
 
-def calculations(): # Final calculations 
+# Final calculations from gathered data
+def calculations(): 
 
     print("Okay, lets get started on the BMI caclulations!")
-    height = float(input("please input your height in inches: "))
-    weight = float(input("please input your weight in lbs: "))
+    height = float(input("Please input your height in inches: "))
+    weight = float(input("Please input your weight in lbs: "))
     BMI = round((weight/(pow(height,2)))*703,4)
     healthy_BMI_min = 18
     healthy_BMI_max= 24
 
-    # not sure if I like this table quite yet. I enjoy the potential of the table itself. 
-
-    fig = go.Figure(data=[go.Table(header=dict(values=['Healthy BMI min', 'Healthy BMI max', 'Your BMI']),
-                 cells=dict(values=[[healthy_BMI_min], [healthy_BMI_max], [BMI]]))
-                     ])
-    for i in tqdm(range(100)):
-        pass
-    fig.show()
-
-
+    # Display the results 
+    print("-------------------")
+    print(f"Your BMI = {BMI} ")
+    print("-------------------")
     if BMI <= healthy_BMI_max and BMI >= healthy_BMI_min:
         print(bcolors.OKBLUE + "\n Congrats, you are at a healthy BMI!" + bcolors.ENDC)
     else:
