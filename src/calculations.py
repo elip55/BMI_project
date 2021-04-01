@@ -1,8 +1,6 @@
 
 from .colors import bcolors
 from .intro import goal
-from tqdm import tqdm
-import plotly.graph_objects as go
 
 # Final calculations from gathered data
 def calculations(): 
@@ -18,6 +16,7 @@ def calculations():
     print("-------------------")
     print(f"Your BMI = {BMI} ")
     print("-------------------")
+    
     if BMI <= healthy_BMI_max and BMI >= healthy_BMI_min:
         print(bcolors.OKBLUE + "\n Congrats, you are at a healthy BMI!" + bcolors.ENDC)
     else:
