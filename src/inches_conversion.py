@@ -2,8 +2,8 @@
 # Function to convert ft to inches, making the calculations easier 
 def inches_conversion(): 
     
-    print("To utilize the formula corectly, we need to convert to inches.")
-    answer_convert_cm = input("Do you need to convert your height in cm to strictly inches?")
+    print("To utilize the formula corectly, we need to convert your height to inches.")
+    answer_convert_cm = input("Do you need to convert your height in cm to strictly inches? y/n")
     if answer_convert_cm == 'y' or answer_convert_cm == ' y':
         height_cm = float(input("Input your height in cm: "))
         height_cm_to_in = round(height_cm/2.54, 4)
