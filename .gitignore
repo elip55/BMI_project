@@ -3,6 +3,6 @@
 
 
 *DS_store
-
+*.csv
 __pycache__/
 

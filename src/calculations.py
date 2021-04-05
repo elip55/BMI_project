@@ -1,6 +1,7 @@
 
 from .colors import bcolors
 from .intro import goal
+import csv
 
 # Final calculations from gathered data
 def calculations(): 
@@ -29,3 +30,19 @@ def calculations():
         print("-------------------")
         print(bcolors.OKBLUE + f"\n Congrats!  You have reached your weight goal of {goal}!" + bcolors.ENDC)
         print("-------------------")
+    
+    # This option will save an excel formatted file for records
+    csv_option = input("Would you like to generate an excel file for your records? y/n ")
+    if csv_option == 'y' or csv_option == ' y':
+        rowlist = [[" ", "GOAL", "BMI"],
+                ["LOW", " ", healthy_BMI_min],
+                ["HIGH", " ", healthy_BMI_max],
+                ["ACTUAL BMI", " ", BMI],
+                ["GOAL WEIGHT", goal, " "],
+                ["ACTUAL WEIGHT", weight, " "]]
+                
+        with open('Bmi results.csv', 'w') as csvfile: 
+            writer = csv.writer(csvfile)
+            writer.writerows(rowlist)
+    else: 
+        print("Thank you for visitng my program!")
