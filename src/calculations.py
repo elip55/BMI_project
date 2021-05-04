@@ -34,14 +34,12 @@ def calculations():
     # This option will save an excel formatted file for records
     csv_option = input("Would you like to generate an excel file for your records? y/n ")
     if csv_option == 'y' or csv_option == ' y':
-        rowlist = [[" ", "WEIGHT", "BMI"],
-                ["LOW", " ", healthy_BMI_min],
-                ["HIGH", " ", healthy_BMI_max],
-                ["GOAL", goal_weight, goal_BMI],
-                ["ACTUAL", weight, BMI]]
+        header = ' , WEIGHT, BMI \n'
+        data = f'LOW, , {healthy_BMI_min} \n HIGH, , {healthy_BMI_max} \n GOAL, {goal_weight}, {goal_BMI} \n ACTUAL, {weight}, {BMI}'
                 
-        with open('results.csv', 'w') as csvfile: 
-            writer = csv.writer(csvfile)
-            writer.writerows(rowlist)
+        w = open('results.csv', 'w')
+        w.write(header)
+        w.write(data)
+        w.close()
     else: 
         print("Thank you for visitng my program!")
