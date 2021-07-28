@@ -20,8 +20,8 @@ def calc1():
     q1 = input('Do you need to convers ft and inches into meters? (y/n) ')
 
     if q1 == 'y' or q1 == ' y':
-        ft = float(input("Please intput ft: "))
-        inches = float(input("please input in: "))
+        ft = float(input("Please input height in: ft: "))
+        inches = float(input("Please input height in: in: "))
         m = (ft*0.3048) + (inches*0.0254)   
     elif q1 == 'n' or q1 == ' n':
         answ1 = float(input("Input your height in meters: "))
