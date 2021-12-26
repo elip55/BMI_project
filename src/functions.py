@@ -1,6 +1,5 @@
 
 
-
 class BodyMassIndex:
 
     def __init__(self, lbs, kg, height_ft, height_in):
@@ -27,13 +26,15 @@ def main_bmi_function1():
     inches = float(input("in: "))
     question1 = input("Do you weigh yourself in lbs or kg? (l/k):")
     if question1 == 'l' or question1 == ' l':
+        kg = 0
         lbs = float(input("Please input your weight in lbs: "))
-        calculations = BodyMassIndex(lbs, _, ft, inches)
+        calculations = BodyMassIndex(lbs, kg, ft, inches)
         bmi = calculations.calculation_lbs() # bmi calculation works
     elif question1 == 'k' or question1 == ' k':
+        lbs = 0
         kilos = float(input("Please input your weight in kg: "))
         kg = kilos
-        calculations = BodyMassIndex(_, kg, ft, inches)
+        calculations = BodyMassIndex(lbs, kg, ft, inches)
         bmi = calculations.calculation_kg() # bmi calculation works
     else:
         print("INVALID INPUT.  PLEASE RUN THE PROGRAM AGAIN.")
