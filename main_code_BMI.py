@@ -1,6 +1,6 @@
 
 
-from src.functions import main_bmi_function1
+from src.functions import main_function
 
-main_bmi_function1()
+main_function()
 

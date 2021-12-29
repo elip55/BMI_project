@@ -20,22 +20,29 @@ class BodyMassIndex:
         return bmi
     
     
-def main_bmi_function1():
-    print("Please input your height in feet & inches")
-    ft = float(input("ft: "))
-    inches = float(input("in: "))
-    question1 = input("Do you weigh yourself in lbs or kg? (l/k):")
-    if question1 == 'l' or question1 == ' l':
-        kg = 0
+def main_function():
+    throwaway = 0
+    
+    # height
+    height_measurement_pref = input("Do you measure yourself if cm, m, or ft & in? (cm/m/ft): ")
+    if height_measurement_pref == "cm" or height_measurement_pref == ' cm':
+        cm_height = float(input("Please input your height in cm: "))
+        calc_cm = BodyMassIndex(throwaway, throwaway, throwaway, throwaway, cm_height, throwaway)
+        meter_height = calc_cm.cm_to_m() # conversion works
+    if height_measurement_pref == 'ft' or height_measurement_pref == ' ft': 
+        ft = int(input("Please input your height\nft: "))
+        inch = float(input("in: "))
+        calc_ft = BodyMassIndex(throwaway, throwaway, ft, inch, throwaway, throwaway)
+        meter_height = calc_ft.ft_to_m()
+    if height_measurement_pref == 'm' or height_measurement_pref == ' m':
+        meter_height = float(input("Please input your height in meters: "))
+    
+    # weight
+    weight_measurement_pref = input("Do you weigh yourself in lbs or kg? (l/k):")
+    if weight_measurement_pref == 'l' or weight_measurement_pref == ' l':
         lbs = float(input("Please input your weight in lbs: "))
-        calculations = BodyMassIndex(lbs, kg, ft, inches)
-        bmi = calculations.calculation_lbs() # bmi calculation works
-    elif question1 == 'k' or question1 == ' k':
-        lbs = 0
-        kilos = float(input("Please input your weight in kg: "))
-        kg = kilos
-        calculations = BodyMassIndex(lbs, kg, ft, inches)
-        bmi = calculations.calculation_kg() # bmi calculation works
-    else:
-        print("INVALID INPUT.  PLEASE RUN THE PROGRAM AGAIN.")
-        exit()
+        calc_lbs = BodyMassIndex(lbs, throwaway, throwaway, throwaway, throwaway, throwaway)
+        kg_weight = calc_lbs.lbs_to_kg()
+    if weight_measurement_pref == 'k' or weight_measurement_pref == ' k':
+        kg_weight = float(input("Please input your weight in kg: "))
+    
