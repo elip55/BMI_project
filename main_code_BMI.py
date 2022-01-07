@@ -1,6 +1,6 @@
 
 
-from src.functions import main_function
+from src.functions import data
 
-main_function()
+data()
 
