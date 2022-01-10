@@ -1,6 +1,6 @@
 
 
-from src.classes import BodyMassIndex
+from src.classes import BodyMassIndex, bcolors
     
     
 def data():
@@ -34,7 +34,7 @@ def data():
     bmi = calc_bmi.bmi_calculation()
     rounded_bmi = round(bmi,0) # temporary fix
     if rounded_bmi in healthy_bmi:
-        print(f'Your bmi is: {bmi}\nThis is within the healthy range')
+        print(f'Your bmi is: {bmi}\nThis is within the' + bcolors.BOLD + ' healthy range!' + bcolors.ENDC)
     elif rounded_bmi not in healthy_bmi:
-        print(f'Your bmi is: {bmi}\nRemember, a healthy range is 18-25, you have some work to do!')
+        print(f'Your bmi is: {bmi}\nRemember, a healthy range is 18-25, ' + bcolors.BOLD + 'you have some work to do!' + bcolors.ENDC)
     
